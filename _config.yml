@@ -74,14 +74,14 @@ since: 2016-08-08
 
 # solve html space/enters
 html_minifier:
-  enable: true
+  enable: false
   exclude: 
 
 css_minifier:
   enable: false
   
 image_minifier:
-  enable: true
+  enable: false
 
 js_minifier:
   enable: false
