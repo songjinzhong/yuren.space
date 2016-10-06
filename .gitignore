@@ -2,7 +2,9 @@
 Thumbs.db
 db.json
 *.log
-node_modules/
+node_modules/*
 public/
 .deploy*/
 themes/*
+!node_modules/hexo-generator-search
+!node_modules/hexo-util
