@@ -8,3 +8,4 @@ public/
 themes/*
 !node_modules/hexo-generator-search
 !node_modules/hexo-util
+!node_modules/hexo-generator-feed
