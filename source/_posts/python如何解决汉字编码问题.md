@@ -18,7 +18,7 @@ photos:
 
 <!--more-->
 
-如果对于ascii、unicode和utf-8还不了解的小伙伴，可以看之前的这篇博客[关于字符串和编码](http://blog.songjz.cn/guan-yu-zi-fu-chuan-he-bian-ma/)
+如果对于ascii、unicode和utf-8还不了解的小伙伴，可以看之前的这篇博客[关于字符串和编码](http://yuren.space/blog/2016/07/30/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E7%BC%96%E7%A0%81/)
 
 那么必须对下面这三个概念有所了解：
 
