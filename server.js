@@ -8,4 +8,9 @@ var express = require('express');
 var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.listen(4000);
-console.log("server start at : 4000")
+console.log("server start at : 4000");
+
+var app2 = express();
+app2.use(express.static(path.join(__dirname, '../../coding/songjz')));
+app2.listen(4001);
+console.log("server2 start at : 4001");
