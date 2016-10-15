@@ -3,7 +3,7 @@ title: '如何在 Hexo 中优雅的实现搜索功能'
 layout: post
 comments: true
 date: 2016-10-07 18:34:00
-tags: [JavaScript, Hexo, lunrJs]
+tags: [JavaScript, Hexo, LunrJs]
 categories: JavaScript
 description: Hexo 实现 搜索 功能
 photos:

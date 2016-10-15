@@ -82,7 +82,7 @@ css_minifier:
   enable: false
   
 image_minifier:
-  enable: false
+  enable: true
 
 js_minifier:
   enable: false
