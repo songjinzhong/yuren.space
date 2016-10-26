@@ -18,17 +18,17 @@ HTTP 协议中的很多坑，自己都遇到过，我就针对自己遇到的几
 
 ## Zlib 压缩数据
 
-对于 Zlib，一点也不陌生，我们平时用它来压缩文件，常见类型有 zip、rar和7z等。Zlib 是一种流行的文件压缩算法，应用十分广泛，尤其是在 Linux 平台。**当应用 Zlib 压缩到一个纯文本文件时，效果是非常明显的，大约可以减少70％以上的文件大小,这取决于文件中的内容。**
+对于 Zlib，一点也不陌生，我们平时用它来压缩文件，常见类型有 zip、rar 和 7z 等。Zlib 是一种流行的文件压缩算法，应用十分广泛，尤其是在 Linux 平台。**当应用 Zlib 压缩到一个纯文本文件时，效果是非常明显的，大约可以减少70％以上的文件大小,这取决于文件中的内容。**
 
-Zlib 也适用于 Web 数据传输，比如利用 Apache 中的 Gzip(后面会提到，一种压缩算法) 模块，我们可以使用 Gzip 压缩算法来对 Apache 服务器发布的网页内容进行压缩后再传输到客户端浏览器。这样经过压缩后实际上降低了网络传输的字节数，最明显的好处就是可以加快网页加载的速度。
+Zlib 也适用于 Web 数据传输，比如利用 Apache 中的 Gzip (后面会提到，一种压缩算法) 模块，我们可以使用 Gzip 压缩算法来对 Apache 服务器发布的网页内容进行压缩后再传输到客户端浏览器。这样经过压缩后实际上降低了网络传输的字节数，最明显的好处就是可以加快网页加载的速度。
 
-网页加载速度加快的好处不言而喻，节省流量，改善用户的浏览体验。而这些好处并不仅仅限于静态内容，PHP动态页面和其他动态生成的内容均可以通过使用Apache压缩模块压缩，加上其他的性能调整机制和相应的服务器端 缓存规则，这可以大大提高网站的性能。因此，对于部署在Linux服务器上的PHP程序，在服务器支持的情况下，建议你开启使用Gzip Web压缩。
+网页加载速度加快的好处不言而喻，节省流量，改善用户的浏览体验。而这些好处并不仅仅限于静态内容，PHP 动态页面和其他动态生成的内容均可以通过使用 Apache 压缩模块压缩，加上其他的性能调整机制和相应的服务器端 缓存规则，这可以大大提高网站的性能。因此，对于部署在 Linux 服务器上的 PHP 程序，在服务器支持的情况下，建议你开启使用 Gzip Web 压缩。
 
 ### Gzip 压缩两种类型
 
 压缩算法不同，可以产生不同的压缩数据(目的都是为了减小文件大小)。目前 Web 端流行的压缩格式有两种，分别是 Gzip 和 Defalte。
 
-Apache 中的就是 Gzip 模块，Deflate 是同时使用了LZ77算法与哈夫曼编码（Huffman Coding）的一个无损数据压缩算法。Deflate 压缩与解压的源代码可以在自由、通用的压缩库zlib上找到。
+Apache 中的就是 Gzip 模块，Deflate 是同时使用了 LZ77 算法与哈夫曼编码（Huffman Coding）的一个无损数据压缩算法。Deflate 压缩与解压的源代码可以在自由、通用的压缩库 zlib 上找到。
 
 更高压缩率的 Deflate 是 7-zip 所实现的。AdvanceCOMP 也使用这种实现，它可以对 gzip、PNG、MNG 以及 ZIP 文件进行压缩从而得到比 zlib 更小的文件大小。在 Ken Silverman的 KZIP 与 PNGOUT 中使用了一种更加高效同时要求更多用户输入的 Deflate 程序。
 
@@ -63,7 +63,7 @@ Accept-Language: zh-CN,zh;q=0.8
 Cookie: a10-default-cookie-persist-20480-sg_bluecoat_a=AFFIHIMKFAAA
 ```
 
-在 `Accept-Encoding` 这一行显示的是 `gzip, deflate`，这句话的意思是，浏览器告诉服务器支持 gzip 和 deflate 两种数据格式，服务器收到这种请求之后，会进行 gzip 或 deflate 压缩。
+在第七行， `Accept-Encoding` 显示的是 `gzip, deflate`，这句话的意思是，浏览器告诉服务器支持 gzip 和 deflate 两种数据格式，服务器收到这种请求之后，会进行 gzip 或 deflate 压缩（一般都是返回 gzip 格式的数据）。
 
 Python 的 urllib2 就可以设置这个参数：
 
@@ -72,6 +72,8 @@ request = urllib2.Request(url)
 request.add_header('Accept-encoding', 'gzip')
 //或者设置成 deflate
 request.add_header('Accept-encoding', 'deflate')
+//或者两者都设置
+request.add_header('Accept-encoding', 'gzip, deflate')
 ```
 
 服务器给的响应一般如下：
@@ -99,8 +101,7 @@ Content-Encoding: gzip
 1. Accept-Encoding 不设置参数：会返回一个无压缩的响应体（浏览器比较特别，他们会自动设置 Accept-Encoding: gzip： deflate 来提高传输速度）；
 2. Accept-Encoding: gzip，100% 的网站都会返回 gzip 压缩，但不保证互联网所有网站都支持 gzip(万一没开启)；
 3. Accept-Encoding: deflate：只有不到 10% 的网站返回一个 deflate 压缩的响应，其他的则返回一个没有压缩的响应体。
-
-说明 gzip 要比 deflate 使用的更广泛。
+4. Accept-Encoding: gzip, deflate：返回的结果也都是 gzip 格式的数据，说明在优先级上 gzip 更受欢迎。
 
 响应头的 Encoding 字段很有帮助，比如我们写个正则表达式匹配响应头是什么压缩：
 
@@ -120,9 +121,9 @@ RFC 1951 (deflate compressed format)
 RFC 1952 (gzip compressed format)
 ```
 
-虽说是 Python 库，但是底层还是 C(C++) 来实现的，这个 `http-parser` 也是 C 实现的[源码](https://github.com/benoitc/http-parser)，Nodejs 的 `http-parser` 也是 C 实现的[源码](https://github.com/nodejs/http-parser)，`zlib` 的 C [源码](https://github.com/madler/zlib)在这里。
+虽说是 Python 库，但是底层还是 C(C++) 来实现的，这个 `http-parser` 也是 C 实现的[源码](https://github.com/benoitc/http-parser)，Nodejs 的 `http-parser` 也是 C 实现的[源码](https://github.com/nodejs/http-parser)，`zlib` 的 C [源码](https://github.com/madler/zlib)在这里。C 真的好牛逼呀！
 
-在解压缩的过程中，需要选择windowBits参数：
+在解压缩的过程中，需要选择 windowBits 参数：
 
 ```
 to (de-)compress deflate format, use wbits = -zlib.MAX_WBITS
@@ -152,6 +153,8 @@ to (de-)compress gzip format, use wbits = zli
 >>> zlib.decompress(zlib_data, zlib.MAX_WBITS|32)
 'test'
 ```
+
+以上参考 stackoverflow [How can I decompress a gzip stream with zlib?](http://stackoverflow.com/questions/1838699/how-can-i-decompress-a-gzip-stream-with-zlib)。
 
 刚接触这些东西的时候，每天都会稀奇古怪的报一些错误，基本上 Google 一下都能解决。
 
@@ -254,7 +257,7 @@ return unchunked
 
 实际中，我们会同时遇到既时 chunked 又是压缩数据的响应，这个时候处理的思路应该是：**先处理 chunked，在处理压缩数据**，顺序不能反。
 
-## MultiPart 
+## MultiPart 数据
 
 MultiPart 的本质就是 Post 请求，MultiPart出现在请求中，用来对一些文件（图片或文档）进行处理，在请求头中出现 `Content-Type: multipart/form-data; boundary=::287032381131322` 则表示为 MultiPart 格式数据包，下面这个是 multipart 数据包格式：
 
@@ -299,7 +302,7 @@ http 协议本身的原始方法不支持 multipart/form-data 请求，那这个
 
 维基百科上关于 [multipart](https://en.wikipedia.org/wiki/MIME#Multipart_messages) 的介绍。
 
-multipart 的数据格式有一定的特点，首先是头部规定了一个 ${bound}，上面那个例子中的 ${bound} 为 `::287032381131322`，由多个内容相同的块组成，每个块的格式以**--加分隔符开始的，然后是该部分内容的描述信息，然后一个回车，然后是描述信息的具体内容**。如果传送的内容是一个文件的话，那么还会包含文件名信息，以及文件内容的类型。
+multipart 的数据格式有一定的特点，首先是头部规定了一个 ${bound}，上面那个例子中的 ${bound} 为 `::287032381131322`，由多个内容相同的块组成，每个块的格式以**\-\-加 ${bound} 开始的，然后是该部分内容的描述信息，然后一个\r\n，然后是描述信息的具体内容**。如果传送的内容是一个文件的话，那么还会包含文件名信息，以及文件内容的类型。
 
 小结，要发送一个 multipart/form-data 的请求，需要定义一个自己的 ${bound} ，按照格式来发请求就好，对于 multipart 的数据格式并没有过多介绍，感觉和 chunked 很类似，不难理解。
 
