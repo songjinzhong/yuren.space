@@ -31,7 +31,7 @@ blog_home_dir: blog
 rss_dir: blog/rss.xml
 about_dir: about
 web_info_dir: blog/web-info
-
+resume_dir: resume
 
 # Writing
 new_post_name: :title.md # File name of new posts
