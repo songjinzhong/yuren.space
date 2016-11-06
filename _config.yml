@@ -75,7 +75,7 @@ since: 2016-08-08
 
 # solve html space/enters
 html_minifier:
-  enable: false
+  enable: true
   exclude: 
 
 css_minifier:
