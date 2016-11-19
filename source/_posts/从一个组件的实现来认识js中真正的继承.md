@@ -300,9 +300,9 @@ classInherit(Student, Person);
 
 ## 进一步完善面向对象
 
-上面的问题只是简单的解决了多余属性和 constructor 丢失的问题，而 supper 问题仍然没有改进。
+上面的问题只是简单的解决了多余属性和 constructor 丢失的问题，而 super 问题仍然没有改进。
 
-举个栗子，来看看 supper 的重要，每个人都会睡觉，sleep 函数是人的一个属性，学生分为小学生和大学生，小学生晚上 9 点睡觉，大学生 12 点睡觉，于是：
+举个栗子，来看看 super 的重要，每个人都会睡觉，sleep 函数是人的一个属性，学生分为小学生和大学生，小学生晚上 9 点睡觉，大学生 12 点睡觉，于是：
 
 ```javascript
 Person.prototype.Sleep = function(){
@@ -323,20 +323,20 @@ C_Student.prototype.Sleep = function(){
 }
 ```
 
-对于 Sleep 方法，显得比较混乱，而我们想要通过 supper，直接调用父类的函数：
+对于 Sleep 方法，显得比较混乱，而我们想要通过 super，直接调用父类的函数：
 
 ```javascript
 E_Student.prototype.Sleep = function(){
-  this._supper(); //supper 方法
+  this._super(); //super 方法
   console.log('Sleep at 9 clock');
 }
 C_Student.prototype.Sleep = function(){
-  this._supper(); //supper 方法
+  this._super(); //super 方法
   console.log('Sleep at 12 clock');
 }
 ```
 
-不知道对 supper 的理解正不正确，总感觉怪怪的，欢迎指正！
+不知道对 super 的理解正不正确，总感觉怪怪的，欢迎指正！
 
 来看下 JQuery 之父是如何 class 的面向对象，[原文在这](http://ejohn.org/blog/simple-javascript-inheritance/)，源码如下。
 
@@ -446,7 +446,7 @@ ming.Sleep();//'Student-xiaoming can Sleep!'
 ming.DoHomeWork(); //'Student-xiaoming can do homework!'
 ```
 
-除了 John Resig 的 supper 方法，很多人都做了尝试，不过我觉得 John Resig 的实现方式非常的妙，也比较贴近 supper 方法，我本人也用源码调试了好几个小时，才勉强能理解。John Resig 的头脑真是令人佩服。
+除了 John Resig 的 super 方法，很多人都做了尝试，不过我觉得 John Resig 的实现方式非常的妙，也比较贴近 super 方法，我本人也用源码调试了好几个小时，才勉强能理解。John Resig 的头脑真是令人佩服。
 
 ## ES6 中的 class
 
