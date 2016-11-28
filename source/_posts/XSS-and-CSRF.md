@@ -130,7 +130,7 @@ Content-Length: ..
 name=ro&userrole=admin&password=123456&confirmpassword=123456
 ```
 
-黑客构造的网站会提交一个 form 表单：
+黑客构造的网站会提交一个 form 表单，并想办法让 form 隐藏：
 
 ```
 <<!DOCTYPE html>
