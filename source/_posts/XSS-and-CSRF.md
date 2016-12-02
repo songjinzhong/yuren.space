@@ -150,7 +150,7 @@ name=ro&userrole=admin&password=123456&confirmpassword=123456
 
 ## 总结
 
-其实攻击很简单，只要的还是如何防御，比如
+其实攻击很简单，主要的还是如何防御，比如
 
 1. 对一些关键字和特殊字符进行过滤或 URL、HTML 编码，"<>?"或"script，javascript"；
 2. Cookie 防盗，在 Cookie 中防止放入用户名和密码，对 Cookie 信息进行 MD5 等算法进行多次散列存放，必要时还要对 ip 和 cookie 进行绑定，一旦检测异常，立马让用户重新登录；
