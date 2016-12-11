@@ -80,7 +80,7 @@ var name = (option.filter && option.filter.name) || [],
   id = (option.filter && option.filter.id) || [];
 ```
 
-在查看 github 返回的 json 数据之前，建议先自己访问一下 [https://api.github.com/users/songjinzhong/repos?type=owner](https://api.github.com/users/songjinzhong/repos?type=owner)，了解数据格式。其中会用到的数据格式有 `html_url`, `name`, `description`, `language`, `stargazers_count`, `forks_count`。
+在查看 github 返回的 json 数据之前，建议先自己访问一下 [https://api.github.com/<wbr>users/songjinzhong/<wbr>repos?<wbr>type=owner](https://api.github.com/users/songjinzhong/repos?type=owner)，了解数据格式。其中会用到的数据格式有 `html_url`, `name`, `description`, `language`, `stargazers_count`, `forks_count`。
 
 ```javascript
 // 先设置 loading，然后 $.get
