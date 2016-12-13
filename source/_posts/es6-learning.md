@@ -221,9 +221,9 @@ B.add(2, 2)// 4
 
 ## Module
 
-ES6 之前，JS 一直没有 modules 体系，解决外部包的问题通过 CommonJS 和 AMD 模块加载方案，一个用于服务器，一个用于浏览器。ES6 提出的 modules （import／exports）方案完全可以取代 CommonJS 和 AMD 成为浏览器和服务器通用的模块解决方案。
+ES6 之前，JS 一直没有 modules 体系，解决外部包的问题通过 CommonJS 和 AMD 模块加载方案，一个用于服务器，一个用于浏览器。ES6 提出的 modules （import／export）方案完全可以取代 CommonJS 和 AMD 成为浏览器和服务器通用的模块解决方案。
 
-关于模块，就只有两个命令，import 用于导入其他模块，exports 用于输出模块。
+关于模块，就只有两个命令，import 用于导入其他模块，export 用于输出模块。
 
 ```javascript
 // profile.js
@@ -238,7 +238,7 @@ import {firstName, lastName, year} from './profile';
 console.log(firstName, lastName) // Michael Jackson
 ```
 
-import 加载的模块可以只加载用到的，但是必须使用同名的原则，可以用 as 来解决名字问题，同样，as 也可以解决 exports 问题：
+import 加载的模块可以只加载用到的，但是必须使用同名的原则，可以用 as 来解决名字问题，同样，as 也可以解决 export 问题：
 
 ```javascript
 //main.js
@@ -256,9 +256,9 @@ export 可以输出的内容很多，包括变量、函数、类，貌似都可�
 function add(a, b){
   return a + b;
 }
-exports default add;
+export default add;
 // 实际上
-exports {add as default};
+export {add as default};
 
 // main.js
 import add from './default'
