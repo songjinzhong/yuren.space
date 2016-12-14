@@ -623,7 +623,7 @@ var selects = document.querySelectAll('a');
 [...selects] // Array
 ```
 
-### set 集合
+### set 集合和 Map 结构
 
 ES6 新增 Set 集合对象，其实像其他语言早都支持了，不过，吃瓜群众，不觉明厉，以后，再遇到数组去重读算法题，就可以：
 
@@ -640,6 +640,51 @@ Set 方法分为操作和遍历，操作方法有 add-添加成员， delete-删
 let set = new Set([1,2,3]);
 set = new Set([...set].map(a => a*2));
 // Set {2, 4, 6}
+```
+
+Map 用来解决对象只接受字符串作为键名，Map 类似于对象，也是键值对集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。
+
+Map 可以通过 set get has delete 方法来操作：
+
+```
+var m = new Map();
+var arr = [1, 2];
+m.set(arr, 'array');
+m.get(arr); // 'array'
+
+m.has(arr) // true
+m.delete(arr) // true
+m.has(arr) // false
+```
+
+### 参数默认
+
+参数默认这个功能使用起来还是比较方便的，以前参数都是通过 || 来实现默认，现在可以使用默认参数。不过这个功能在 Python 等语言中已经是支持的。
+
+```
+// 以前写代码
+var sayHello = function(name){
+  var name = name || 'world';
+  console.log('hello ' + name);
+}
+
+//参数默认
+var sayHello = function(name = 'world'){
+  console.log('hello ' + name);
+}
+
+sayHello() // 'hello world'
+sayHello('ES6') // 'hello ES6'
+```
+
+对于不定参数，以前都是对 arguments 对象处理，且 arguments 对象还是个伪数组，现在方便了：
+
+```
+var add = function(...arr){
+  console.log(arr.constructor.name) // Array
+  return arr.reduce((a, b) => a+b, 0);
+}
+add(1,2,3) // 6
 ```
 
 ## 总结
