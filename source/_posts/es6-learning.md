@@ -625,7 +625,7 @@ var selects = document.querySelectAll('a');
 
 ### set 集合和 Map 结构
 
-ES6 新增 Set 集合对象，其实像其他语言早都支持了，不过，吃瓜群众，不觉明厉，以后，再遇到数组去重读算法题，就可以：
+ES6 新增 Set 集合对象，其实像其他语言早都支持了，不过，吃瓜群众，不觉明厉，以后，再遇到数组去重算法题，就可以：
 
 ```javascript
 [...(new Set([1, 2, 2, 3]))];
@@ -634,7 +634,7 @@ ES6 新增 Set 集合对象，其实像其他语言早都支持了，不过，�
 
 Set 方法分为操作和遍历，操作方法有 add-添加成员， delete-删除成员， has-拥有判断返回布尔值， clear-清空集合。
 
-遍历操作有 keys()，values()，entries()，forEach()，...，for of，map 和 filter 函数也可以用于 Set，不过要进行巧妙操作：
+遍历操作有 keys()，values()，entries()，forEach()，...，for of，map 和 filter 函数也可以用于 Set，不过要进行巧妙操作，先转换成数组，在进行操作：
 
 ```javascript
 let set = new Set([1,2,3]);
@@ -644,7 +644,7 @@ set = new Set([...set].map(a => a*2));
 
 Map 用来解决对象只接受字符串作为键名，Map 类似于对象，也是键值对集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。
 
-Map 可以通过 set get has delete 方法来操作：
+Map 可以通过 [set、 get、 has、 delete] 方法来操作：
 
 ```
 var m = new Map();
