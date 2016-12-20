@@ -3,7 +3,7 @@ title: webpack 入门实战
 layout: post
 comments: true
 date: 2016-12-19 19:17:05
-tags: [React相关, webpack]
+tags: [React相关, webpack, JavaScript]
 categories: React相关
 description: webpack 入门 实战
 photos:
@@ -248,9 +248,102 @@ webpack 提供热更新，官网关于热更新的介绍：[hot-module-replaceme
 
 webpack-dev-server 本身就带有热更新功能，只需要在参数启动参数重添加 `webpack-dev-server --inline --hot`，如果嫌每次添加麻烦，可用在 package.json 中 script 设置 start 或在 webpack.config.js 中开启。
 
+### html-webpack-plugin
+
+这个插件主要是针对于 html 的，可以自动生成 html 文件，尤其当使用了 hash 之后，不用困扰因 hash 的变化带来的问题。
+
+```javascript
+var webpack = require('webpack')
+var htmlwebpackplugin = require('html-webpack-plugin')
+module.exports = {
+  entry: './main.js',
+  output: {
+    path: __dirname,
+    filename: 'bundle.js'
+  },
+  plugins: [new htmlwebpackplugin()]
+}
+```
+
+有时候会因为 html 中必须要有一些特别的东西，不能直接生成，此时就需要配置模版：
+
+```javascript
+module.exports = {
+  plugins:[
+    new htmlwebpackplugin({
+      filename: 'hello.html', // 生成的文件
+      template: 'src/template.html' // 模版文件
+    })
+  ]
+}
+```
+
+更多配置信息，[参考](http://www.cnblogs.com/haogj/p/5160821.html)：
+
+1. title: 页面 title
+2. filename: 输出的 HTML 文件名，默认是 index.html
+3. template: 模板文件路径，支持加载器，比如 html!./index.html
+4. inject: true | 'head' | 'body' | false  ,注入所有的资源到特定的 template 或者 templateContent 中，如果设置为 true 或者 body，所有的 javascript 资源将被放置到 body 元素的底部，'head' 将放置到 head 元素中。
+5. favicon: 添加特定的 favicon 路径到输出的 HTML 文件中。
+6. minify: {} | false , 传递 html-minifier 选项给 minify 输出
+7. hash: true | false, 如果为 true, 将添加一个唯一的 webpack 编译 hash 到所有包含的脚本和 CSS 文件，对于解除 cache 很有用。
+8. cache: true | false，如果为 true, 这是默认值，仅仅在文件修改之后才会发布文件。
+9. showErrors: true | false, 如果为 true, 这是默认值，错误信息会写入到 HTML 页面中
+10. chunks: 允许只添加某些块 (比如，仅仅 unit test 块)
+11. chunksSortMode: 允许控制块在添加到页面之前的排序方式，支持的值：'none' | 'default' | {function}-default:'auto'
+12. excludeChunks: 允许跳过某些块，(比如，跳过单元测试的块) 
+
+如果你感兴趣，还可以去看一看如何自己手动写 webpack 插件。[链接1](https://github.com/lcxfs1991/blog/issues/1)[链接2](http://www.cnblogs.com/haogj/p/5649670.html)
+
+### Environment flags
+
+有时候，一些函数只需在 dev 环境下运行，有些函数要在 product 环境下运行，通过设置 webpack 的 DefinePlugin 就可以很轻松的帮助我们实现，比如：
+
+```javascript
+var webpack = require('webpack');
+
+var devFlagPlugin = new webpack.DefinePlugin({
+  // __DEV__ 默认是 false，除非手动设置开发环境
+  __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
+});
+
+module.exports = {
+  entry: './main.js',
+  output: {
+    filename: 'bundle.js'
+  },
+  plugins: [devFlagPlugin]
+};
+```
+
+```javascript
+// main.js
+document.write('<h1>Hello World</h1>');
+
+if (__DEV__) { //如果开发环境
+  document.write(new Date());
+}
+```
+
+此时有两种运行方式，进入开发模式的运行方式：
+
+```
+# Linux & Mac
+$ env DEBUG=true webpack-dev-server
+
+# Windows
+$ set DEBUG=true
+$ webpack-dev-server
+```
+
+## 总结
+
+在接触 webpack 之前，强烈建议先学习 ES6。其实，很多人都说前端变化太快，昨天还很火热的框架，可能今天就被另一个所取代。我觉得，正是这种快速的更新，让那些喜欢学习，喜欢钻研的程序员，获得了新生，新的活力。共勉！
+
 ## 参考
 
 >[webpack 中文官网](http://webpackdoc.com/)
+>[阮一峰 webpack-demos](https://github.com/ruanyf/webpack-demos)
 >[webpack编译流程漫谈](https://github.com/slashhuang/blog/issues/1)
 >[webpack学习之路](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-12/webpack.md)
 >[入门Webpack，看这篇就够了](http://blog.csdn.net/kun5706947/article/details/52596766)
