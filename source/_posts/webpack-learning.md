@@ -14,7 +14,7 @@ photos:
 
 <!--more-->
 
-但是，现在，学习 react 的时候，我又不得不来学习 webpack。webpack 最近火得不行（或许已经火了很久了），当下最热门的前端资源模块化管理和打包工具,它能把各种资源，包括 jxs、coffeeJS、less／sass，甚至图片，当作模块来加载和使用。同样它需要一个 webpack.config.js 的配置文件，有专门针对于 css、js 和图片等插件，在 js 中直接通过 require 来使用。
+但是，现在，学习 react 的时候，我又不得不来学习 webpack。webpack 最近火得不行（其实已经火了很久了），当下最热门的前端资源模块化管理和打包工具,它能把各种资源，包括 jxs、coffeeJS、less／sass，甚至图片，当作模块来加载和使用。同样它需要一个 webpack.config.js 的配置文件，有专门针对于 css、js 和图片等插件，在 js 中直接通过 require 来使用模块，很方便。
 
 webpack 可以将文件模块按照依赖打包成方便使用的前端资源，还可以将按需加载的模块进行异步加载。
 
@@ -124,7 +124,7 @@ document.write('hello webpack');
 document.write('hello module');
 
 //ertry.js
-document.write(require(module));
+document.write(require('module'));
 ```
 
 webpack 会分析每个文件的入口，把依赖的相关文件都打包到 bundle.js。`webpack entry.js bundle.js` 这句话执行后，会先执行 entry.js，其他文件，则只有在 require 的时候才会加载。
@@ -190,7 +190,7 @@ module.exports = {
       },
     }),
     // 扩展插件
-    ComponentPlugin
+    ComponentPlugin()
   ]
 };
 ```
@@ -204,7 +204,7 @@ module 中最需要注意的就是 loaders，
 3. include/exclude：手动添加必须处理的文件（文件夹）或屏蔽不需要处理的文件（文件夹）（可选）；
 4. query：为loaders提供额外的设置选项（可选）
 
-resolve 是配置的其他解决方案，比如 resolve.alias 可以定义模块的别名，resolve.root 可以定义绝对路径。
+resolve 是配置的其他解决方案，比如 resolve.alias 可以定义模块的别名，resolve.root 可以定义绝对路径。resolve.extensions 可以省去加载文件的后缀名，即后缀名自动补全。但是必须要在前面加一个空的字符串，否则会导致无法加载的情况。
 
 ## webpack 更强大的功能
 
