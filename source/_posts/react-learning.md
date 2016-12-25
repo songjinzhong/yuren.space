@@ -110,13 +110,21 @@ var Hello = React.createClass({
   }
 });
 
+// 或者 ES6 写法，继承于 Component 类
+class Hello extends Component{
+  render() {
+    return <h1>Hello {this.props.name}</h1>;
+  }
+}
+
+// 使用
 ReactDOM.render(
   <Hello name="React" />,
   document.getElementById('example')
 );
 ```
 
-`Hello` 就是 Component，可以和 HTML 元素一样使用，但是**组件首字母必须大写**，且**顶层标签只能有一个**，`this.props` 是组件的一个对象，可以在组件使用的地方，把值传给定义的地方，这里的 this.props.name 就是指 React。
+`Hello` 就是 Component，可以和 HTML 元素一样使用，但是**组件首字母必须大写**，且**顶层标签只能有一个**，`this.props` 是组件的一个对象，可以在组件使用的地方，把值传给定义的地方，这里的 this.props.name 就是指 `"React"`。
 
 因为 class 和 for 是 JavaScript 的保留字，所以 class 要写成 className，for 要写成 htmlFor。
 
@@ -128,9 +136,9 @@ ReactDOM.render(
 var List = React.createClass({
   render() {
     return (
-      <ul>
+      <ol>
       {React.Children.map(this.props.children, child => <li>{child}</li>)}
-      </ul>
+      </ol>
     )
   }
 });
@@ -162,6 +170,7 @@ var Hello = React.createClass({
   }
   getDefaultProps(){
     return {
+      // title 设置成默认值
       title: 'React'
     }
   }
@@ -202,18 +211,18 @@ var MyComponent = React.createClass({
 
 ### state
 
-其实前面介绍了很多，还是没有和数据扯上关系。React 提供了 state 状态集，开始有一个初始状态，当后面由于某些操作导致状态改变的时候，便会自动的渲染 DOM，触发 UI 层的改变。
+其实前面介绍了很多，还是没有和数据扯上关系。前面已经提到，开发者只需要关心整体的数据，具体是通过什么来设置的呢？React 提供了 state 状态集，开始有一个初始状态，当后面由于某些操作导致状态改变的时候，便会自动的渲染 DOM，触发 UI 层的改变，这其中的一些 diff 算法都是对开发者不可见的。
 
 ```
 var MyComponent = React.createClass({
   getInitialState() {
-    return {clicked: false}
+    return {clickedNum: 0}
   }
   handleClick() {
-    this.setState({clicked: !this.state.liked})
+    this.setState({clickedNum: this.state.clickedNum + 1})
   }
   render() {
-    var text = this.state.clicked ? 'clicked odd' : 'clicked even'
+    var text = `You have clicked this button ${this.state.clickedNum} times!`
     return (
       <div>
         <span>{text}</span>
@@ -284,6 +293,17 @@ ReactDOM.render(
 
 从输出的结果来看，执行的顺序就是按照上面的顺序，而且会发现 `componentWillUpdate`、`componentDidUpdate`函数会重复执行，因为 100 毫秒透明度就变化了一次。
 
+```
+component will mount
+component did mount
+component will update
+component did update
+component will update
+component did update
+component will update
+.....
+```
+
 ### ajax 操作
 
 通过 ajax 可以获取来自服务器的数据，比如：
@@ -326,7 +346,7 @@ ReactDOM.render(
 );
 ```
 
-之前使用 isMounted() 函数，貌似后来被取消了，然后使用 componentWillUnmount 函数来 abort 之前的 ajax 请求。
+之前使用 isMounted() 函数，貌似后来被取消了，然后使用 `componentWillUnmount` 函数来 abort 之前的 ajax 请求，因为 componentWillUnmount 表示的就是组件即将被删除，如果异步获取 ajax 还没有完成的话，就把它取消掉。
 
 不过感觉 ES6 提供了 Promise 之后，貌似方便多了。
 
@@ -367,7 +387,7 @@ ReactDOM.render(
 );
 ```
 
-学好 ES6 真的很重要。
+学好 ES6 真的很重要。当然，React 也是一把好枪，ES6 是一把好布，好布擦好枪，这才能摩擦出高效率。
 
 ## 总结
 
