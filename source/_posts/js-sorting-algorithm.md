@@ -14,17 +14,17 @@ photos:
 <!--more-->
 ## 排序算法的设计和实现
 
-说到排序，之前在做百度前端学院的题目的时候，也碰到过，并把它整理到 [github](https://songjinzhong.github.io/BaiDu_IFE/stage2/task19/) 上。这是一个可视化的排序展示，支持冒泡、插入和选择排序，具体使用先点 随机添加 40 个，然后点排序，就可以看到可视化的效果。
+说到排序，之前在做百度前端学院的题目的时候，也碰到过，并把它整理到 [github](https://songjinzhong.github.io/BaiDu_IFE/stage2/task19/) 上。这是一个可视化的排序展示，支持冒泡、插入和选择排序，具体使用先 随机添加 40 个，然后点排序，就可以看到可视化的效果。
 
-推荐一下，这里有个可视化的[排序网站](http://coolshell.cn/articles/3933.html)。
+推荐一下，这里有个可视化的[排序博客](http://coolshell.cn/articles/3933.html)，各大排序算法的实现都栩栩如生。
 
-比如 javascript 算法函数可以扔给 Array 原型：`Array.prototype.sort = function`，也可以直接写个全局函数：`function sort(array){}`，在我看来，哪种方法都一样，只要是兼容性的问题，如果可以考虑对所有可遍历对象都能排序，才大法好。
+javascript 写排序算法也比较奇葩，主要是参数的问题，比如 javascript 算法函数可以扔给 Array 原型：`Array.prototype.sort = function`，也可以直接写个函数带参数：`function sort(array){}`，在我看来，哪种方法都一样，需要注意的是兼容性的问题，如果可以考虑对所有可遍历对象都能排序（比如 arguments），才大法好。
 
-好了，直接入主题了（下面的排序均是左小右大）。
+好了，直接入主题了（下面的排序均是从小到大的顺序）。
 
 ### 插入排序
 
-插入排序是一种基本排序，它的基本思路是构件有序序列，对于未排序的数据，在已排序的基础上，从右向左（或者二分查找）选择位置插入，[维基百科-插入排序](https://zh.wikipedia.org/wiki/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)。
+插入排序是一种基本排序，它的基本思路是构建有序序列，对于未排序的数据，在已排序的基础上，从右向左（或者二分查找）选择位置插入，[维基百科-插入排序](https://zh.wikipedia.org/wiki/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)。
 
 ```javascript
 function insert_sort(input){
@@ -39,7 +39,7 @@ function insert_sort(input){
 }
 ```
 
-如果以比较次数和移动次数来衡量算法的效率，最好情况下，比较 n-1 次，移动 0 次，最坏情况，比较 n*(n-1)/2 次，移动 n*(n-1)/2 次。
+如果以比较次数和移动次数来衡量算法的效率，最好情况下，比较 n-1 次，移动 0 次，最坏情况，比较 n\*(n-1)/2 次，移动 n\*(n-1)/2 次。
 
 ### 二分插入排序
 
@@ -111,7 +111,7 @@ function select_sort(input){
 }
 ```
 
-选择排序在最好情况下，也要比较 n*(n-1)/2，移动 n-1 次（这里可以加个判断，移动 0 次），最差情况下，比较 n*(n-1)/2 次，移动 n-1 次。所有最好，最坏情况下，比较次数是一样的。
+选择排序在最好情况下，也要比较 n\*(n-1)/2，移动 n-1 次（这里可以加个判断，移动 0 次），最差情况下，比较 n\*(n-1)/2 次，移动 n-1 次。所有最好，最坏情况下，比较次数是一样的。
 
 ### 冒泡排序
 
@@ -138,7 +138,7 @@ function bubble_sort(input){
 }
 ```
 
-有 flag 时，最好情况比较 n-1 次，移动 0 次，最坏情况，比较 n*(n-1)/2 次，交换 n*(n-1)/2。
+有 flag 时，最好情况比较 n-1 次，移动 0 次，最坏情况，比较 n\*(n-1)/2 次，交换 n\*(n-1)/2。
 
 ### 快排
 
@@ -185,6 +185,29 @@ partition 函数就是来找对应的 mid，sort 函数用来排序。
 2. 当 start 和 end 间距很小的时候，改用其他高效算法
 3. 还有就是优化递归。
 
+其实呢，上面的这个算法，并不属于 JavaScript 版本，而更像 C 版本的，重在让人理解快排，下面是 JS 版的快排，来体验下 JS 的迷人特性吧：
+
+```javascript
+// javascript 版
+function quick_sort(input) {
+  var len = input.length;
+  if (len <= 1)
+    return input.slice(0);
+  var left = [];
+  var right = [];
+  // 基准函数
+  var mid = [input[0]];
+  for (var i = 1; i < len; i++)
+    if (input[i] < mid[0])
+      left.push(input[i]);
+    else
+      right.push(input[i]);
+  return quick_sort(left).concat(mid.concat(quick_sort(right)));
+};
+```
+
+这个 JS 版快排也比较好懂，找到那个基准（这里是第一个元素 input[0]）之后，遍历，把小于基准的放到左边，大于基准的放到右边，然后返回拼接数组。
+
 ### 归并排序
 
 在学习分治算法时，典型的一个例子就是归并。[维基百科-归并排序](https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)。思路就是先分后和，依旧是递归。
@@ -219,6 +242,26 @@ function merge_sort(input){
 }
 ```
 
+同样，以上归并仍然是类似 C 语言版本，JavaScript 版本如下：
+
+```javascript
+// javascript 版
+function merge_sort(input) {
+  var merge = function(left, right) {
+    var final = [];
+    while (left.length && right.length)
+      final.push(left[0] <= right[0] ? left.shift() : right.shift());
+    return final.concat(left.concat(right));
+  };
+  var len = input.length;
+  if (len < 2) return input;
+  var mid = len / 2;
+  return merge(merge_sort(input.slice(0, parseInt(mid))), merge_sort(input.slice(parseInt(mid))));
+};
+```
+
+数组的一系列操作大大优化排序的过程。
+
 ### 堆排序
 
 堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。[维基百科-堆排序](https://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F)。
@@ -233,7 +276,7 @@ function heap_sort(input){
     arr[i] = arr[j];
     arr[j] = tmp;
   }
-  // 建立一个最大堆
+  // 上推操作
   function max_heapify(start, end) {
     var dad = start;
     var son = dad * 2 + 1;
@@ -248,6 +291,7 @@ function heap_sort(input){
   }
 
   var len = arr.length;
+  // 建立一个最大堆
   for (var i = Math.floor(len / 2) - 1; i >= 0; i--)
     max_heapify(i, len);
   for (var i = len - 1; i > 0; i--) {
@@ -258,6 +302,44 @@ function heap_sort(input){
   return arr;
 };
 ```
+
+堆排序的过程大致如下：先生成一个最大堆，然后将根节点（最大元素）与最后一个元素交换，然后把剩下的 n-1 元素再次生成最大堆，交换，生成...
+
+## 总结
+
+那么问题来了，到底这些算法写的对不对，不然写个测试脚本来试试：
+
+```javascript
+// 两种排序算法
+var test = function(sort1, sort2){
+  var arr1 = [], arr2 = [];
+  // 随机生成 100 个 1～100 随机数
+  function random_arr(a1, a2){
+    var tmp;
+    for(var i = 0; i < 100; i++){
+      tmp = parseInt(Math.random()*100) + 1;
+      a1.push(tmp);
+      a2.push(tmp);
+    }
+  }
+
+  var flag = true;
+  for(var i = 0; i < 100; i++){
+    random_arr(arr1, arr2);
+    // 比较排序算法的结果
+    if(sort1(arr1).toString() != sort2(arr2).toString()){
+      flag = false;
+      break;
+    }
+    arr1 = arr2 = [];
+  }
+  return flag ? "Ok!" : "Error!"
+}
+
+console.log(test(insert_sort, merge_sort)); //"Ok!"
+```
+
+如果已知插入排序是正确的情况下，就可以验证归并排序是否正确了。共勉！
 
 ## 参考
 
