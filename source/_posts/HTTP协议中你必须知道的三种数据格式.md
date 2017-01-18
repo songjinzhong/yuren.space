@@ -238,18 +238,18 @@ Python 处理的过程如下：
 unchunked = b''
 pos = 0
 while pos <= len(data):
-    chunkNumLen = data.find(b'\r\n', pos)-pos
-    //从第一个元素开始，发现第一个\r\n，计算length长度
-    chunkLen=int(data[pos:pos+chunkNumLen], 16)
-    //把length的长度转换成int
-    if chunkLen == 0:
-        break
-        //如果长度为0，则说明到结尾
-    chunk = data[pos+chunkNumLen+len('\r\n'):pos+chunkNumLen+len('\r\n')+chunkLen]
-    unchunked += chunk
-    //将压缩数据拼接
-    pos += chunkNumLen+len('\r\n')+chunkLen+len('\r\n')
-    //同时pos位置向后移动
+  chunkNumLen = data.find(b'\r\n', pos)-pos
+  //从第一个元素开始，发现第一个\r\n，计算length长度
+  chunkLen=int(data[pos:pos+chunkNumLen], 16)
+  //把length的长度转换成int
+  if chunkLen == 0:
+    break
+    //如果长度为0，则说明到结尾
+  chunk = data[pos+chunkNumLen+len('\r\n'):pos+chunkNumLen+len('\r\n')+chunkLen]
+  unchunked += chunk
+  //将压缩数据拼接
+  pos += chunkNumLen+len('\r\n')+chunkLen+len('\r\n')
+  //同时pos位置向后移动
 
 return unchunked
 //此时处理后unchunked就是普通的压缩数据，可以用zlib解压函数进行解压

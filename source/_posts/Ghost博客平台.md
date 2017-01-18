@@ -67,22 +67,22 @@ Ghost博客需要的库较多，需要安装一会。
 
 ```
 production: {
-    url: 'http://blog.songjz.cn',
-	//将上面url修改为自己的博客主页
-    mail: {},
-    database: {
-        client: 'sqlite3',
-        connection: {
-            filename: path.join(__dirname, '/content/data/ghost.db')
-        },
-        debug: false
+  url: 'http://blog.songjz.cn',
+  //将上面url修改为自己的博客主页
+  mail: {},
+  database: {
+    client: 'sqlite3',
+    connection: {
+      filename: path.join(__dirname, '/content/data/ghost.db')
     },
-    server: {
-        host: '127.0.0.1',
-		//host修改成'0.0.0.0'
-        port: '2368'
-		//运行的端口，把端口设置成'80'
-    }
+    debug: false
+  },
+  server: {
+    host: '127.0.0.1',
+  //host修改成'0.0.0.0'
+    port: '2368'
+  //运行的端口，把端口设置成'80'
+  }
 },
 ```
 
@@ -139,25 +139,25 @@ make
 
 ```
 http {
-	include       mime.types;
-	default_type  application/octet-stream;
-	sendfile        on;
-	keepalive_timeout  65;
-	#pool
-	upstream blog_pool{
-		server 127.0.0.1:5000;#这边开启端口5000
-	}
-	server {
-		listen       80;
-		server_name  blog.songjz.cn;
-		#这句话就是把浏览器打开blog.songjz.cn提交给其它端口
-		location / {
-			proxy_set_header Host $host;
-			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-			proxy_pass http://blog_pool;
-			#调用前面建好的pool
-		}
-	}
+  include       mime.types;
+  default_type  application/octet-stream;
+  sendfile        on;
+  keepalive_timeout  65;
+  #pool
+  upstream blog_pool{
+  server 127.0.0.1:5000;#这边开启端口5000
+  }
+  server {
+  listen       80;
+  server_name  blog.songjz.cn;
+  #这句话就是把浏览器打开blog.songjz.cn提交给其它端口
+  location / {
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_pass http://blog_pool;
+    #调用前面建好的pool
+  }
+  }
 ```
 
 增加nginx的环境变量，通过：

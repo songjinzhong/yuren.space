@@ -28,11 +28,11 @@ photos:
 
 // css style
 .test{
-    width:100px;
-    height: 100px;
-    padding:10px;
-    border:2px solid black;
-    margin: 5px;
+  width:100px;
+  height: 100px;
+  padding:10px;
+  border:2px solid black;
+  margin: 5px;
 }
 ```
 
@@ -102,9 +102,9 @@ test.offsetHeight // 100
   overflow: auto; //新增
 }
 .test2{
-    width: 150px;
-    height: 150px;
-    background-color: gray;
+  width: 150px;
+  height: 150px;
+  background-color: gray;
 }
 ```
 

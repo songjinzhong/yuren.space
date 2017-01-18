@@ -24,8 +24,8 @@ photos:
 <script src="js/jquery.ghostHunter.min.js"></script>
 
 <form>
-	  <input id="search-field" /> //id为”search-field“
-	  <input type="submit" value="search">
+  <input id="search-field" /> //id为”search-field“
+  <input type="submit" value="search">
 </form>
 <section id="results"></section>
 //”results“为输出结果
@@ -35,7 +35,7 @@ photos:
 
 ```
 $("#search-field").ghostHunter({
-	  results   : "#results"
+  results   : "#results"
 });
 ```
 
@@ -55,20 +55,20 @@ Lunr.js 是一个 JavaScript 搜索引擎，是JS前端框架，可以快速的�
 
 ```
 var index = lunr(function () {
-	this.field('title', {boost: 10})
-	this.field('body')
-	this.ref('id')
+  this.field('title', {boost: 10})
+  this.field('body')
+  this.ref('id')
 })
 
 index.add({
-	id: 1,
-	title: 'Foo',
-	body: 'Foo foo foo!'
+  id: 1,
+  title: 'Foo',
+  body: 'Foo foo foo!'
 })
 index.add({
-	id: 2,
-	title: 'Bar',
-	body: 'Bar bar bar!'
+  id: 2,
+  title: 'Bar',
+  body: 'Bar bar bar!'
 })
 
 index.search('foo')
@@ -80,9 +80,9 @@ lunr.js 词分析器基于 Martin Porter’s 算法，这个算法具体是怎�
 
 ```
 index.add({
-	id: 1,
-	title: 'abc def',
-	body: 'hijk lmnb'
+  id: 1,
+  title: 'abc def',
+  body: 'hijk lmnb'
 })
 var result=index.search("abc")
 ```
@@ -107,13 +107,13 @@ title 和 body 中共有三个词 abc、def和hijk，首字母开头是a、d、h
 
 ```
 lunr.trimmer = function (token) {
-//check token is chinese then not replace	
-	if(isChineseChar(token)){
-		return token;
-	}
+//check token is chinese then not replace 
+  if(isChineseChar(token)){
+  return token;
+  }
   return token
-	.replace(/^\W+/, '')
-	.replace(/\W+$/, '')
+  .replace(/^\W+/, '')
+  .replace(/\W+$/, '')
 }
 
 function isChineseChar(str){     
@@ -151,15 +151,15 @@ trimmer 是用来对 tokens 进行过滤，把一些非字母替换掉，加入�
 ```
 //之前的笨方法
 index.add({
-	id: 1,
-	title: '我想家了妈妈，我想回家',
-	body: ''
+  id: 1,
+  title: '我想家了妈妈，我想回家',
+  body: ''
 })
 //在 add 之前先用中文分词处理一下title
 index.add({
-	id: 1,
-	title: '我 想家 了 妈妈 我 想 回家',
-	body: ''
+  id: 1,
+  title: '我 想家 了 妈妈 我 想 回家',
+  body: ''
 })
 ```
 

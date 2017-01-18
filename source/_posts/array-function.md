@@ -5,12 +5,12 @@ comments: true
 date: 2017-01-15 15:37:37
 tags: [JavaScript, JS进阶]
 categories: [JavaScript]
-description: 数组方法总结
+description: 数组 方法 总结
 photos:
 - http://ww1.sinaimg.cn/mw690/e3dde130gw1fbrcw7ywoij20zk0o2wj5.jpg
 - http://ww1.sinaimg.cn/small/e3dde130gw1fbrcw7ywoij20zk0o2wj5.jpg
 ---
-说起来很搞笑，我在用 sublime 3 写排序算法的时候，准备用 nodejs 来运行，而且 sublime 3 也提供 nodejs 编译运行。但问题来了，我比较挫，写了个死循环，然后 sublime 3 也不给提示，连续跑了 3 遍，过了一会电脑发热，风扇开始叫了，我察觉到，一看进程，3 个 node 进程在狂吃内存和 cpu，我在想，这个 bug 该反馈给 sublime 3 还是 node 呢？
+说起来很搞笑，我在用 sublime 3 写排序算法的时候，准备用 nodejs 来运行，就用 sublime 3 提供的编译功能。但问题来了，我比较挫，写了个死循环，然后 sublime 3 也不给输出提示，我很疑惑的连续跑了 3 遍，过了一会电脑发热，风扇开始叫了，我察觉到，一看进程，3 个 node 进程在狂吃内存和 cpu，我在想，这个 bug 该反馈给 sublime 3 还是 node 呢？
 <!--more-->
 JavaScript 中的数组本身就很特别，不像 C 或 Java，搞了数组、list 一整套东西，JS 中的数组就完全可以当作一个栈或队列来使用，四大操作 pop、push、shift、unshift。
 
@@ -391,7 +391,7 @@ a2 //"1,2,3"
 
 ## ES6 中新添的数组方法
 
-上面的这些方法都是 ES5 及之前的，来看看 ES6 添加了哪些新方法。
+上面的这些方法都是 ES5 的，来看看 ES6 添加了哪些新方法。
 
 ### copyWithin
 
