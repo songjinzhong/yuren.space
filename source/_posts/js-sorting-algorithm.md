@@ -16,7 +16,7 @@ photos:
 
 说到排序，之前在做百度前端学院的题目的时候，也碰到过，并把它整理到 [github](https://songjinzhong.github.io/BaiDu_IFE/stage2/task19/) 上。这是一个可视化的排序展示，支持冒泡、插入和选择排序，具体使用先 随机添加 40 个，然后点排序，就可以看到可视化的效果。
 
-推荐一下，这里有个可视化的[排序博客](http://coolshell.cn/articles/3933.html)，各大排序算法的实现都栩栩如生。
+推荐一下，[HTML5 Canvas Demo: Sorting Algorithms](http://math.hws.edu/eck/jsdemo/sortlab.html)，这里还有个可视化的[排序博客](http://coolshell.cn/articles/3933.html)，各大排序算法的实现都栩栩如生。
 
 javascript 写排序算法也比较奇葩，主要是参数的问题，比如 javascript 算法函数可以扔给 Array 原型：`Array.prototype.sort = function`，也可以直接写个函数带参数：`function sort(array){}`，在我看来，哪种方法都一样，需要注意的是兼容性的问题，如果可以考虑对所有可遍历对象都能排序（比如 arguments），才大法好。
 
