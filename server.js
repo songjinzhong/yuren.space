@@ -11,7 +11,7 @@ app.listen(4000);
 console.log("server start at : 4000");
 
 app.get('*', function(req, res){
-	res.sendfile('public/404.html');
+	res.sendFile('404.html', { root: path.join(__dirname, 'public') });
 });
 
 var app2 = express();
@@ -19,5 +19,5 @@ app2.use(express.static(path.join(__dirname, '../../coding/songjz')));
 app2.listen(4001);
 console.log("server2 start at : 4001");
 app2.get('*', function(req, res){
-	res.sendfile('../../coding/songjz/404.html');
+	res.sendFile('404.html', { root: path.join(__dirname, '../../coding/songjz') });
 });
