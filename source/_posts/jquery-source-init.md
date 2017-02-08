@@ -126,7 +126,7 @@ rquickExpr.exec('#id') //["#id", undefined, "id"]
 rquickExpr.exec('.class') //null
 ```
 
-上面这一系列的正则表达式 exec，只是为了说明 `rquickExpr` 这个正则表达式执行后的结果，首先，如果匹配到，结果数组的长度是 3，如果匹配到 '<div>' 这种 html，数组的第三个元素是 underfined，如果匹配到 #id，数组的第二个元素是 underfined，如果匹配不到，则为 null。
+上面这一系列的正则表达式 exec，只是为了说明 `rquickExpr` 这个正则表达式执行后的结果，首先，如果匹配到，结果数组的长度是 3，如果匹配到 `<div>` 这种 html，数组的第三个元素是 underfined，如果匹配到 #id，数组的第二个元素是 underfined，如果匹配不到，则为 null。
 
 另外还有一个正则表达式：
 
@@ -321,7 +321,7 @@ jQuery.makeArray = function (arr, results) {
 }
 ```
 
-makeArray 把左边的数组或字符串并入到右边的数组或一个新数组，其中又简介的引用 jQuery.merge 函数。
+makeArray 把左边的数组或字符串并入到右边的数组或一个新数组，其中又间接的引用 jQuery.merge 函数。
 
 接下来是着 isArrayLike 函数，可能需要考虑多方面的因素，比如兼容浏览器等，就有了下面这一长串：
 

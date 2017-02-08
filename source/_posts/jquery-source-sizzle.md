@@ -12,7 +12,7 @@ photos:
 ---
 Sizzle 原本是 jQuery 中用来当作 DOM 选择器的，后来被 John Resig 单独分离出去，成为一个单独的项目，可以直接导入到项目中使用。[jquery/sizzle](https://github.com/jquery/sizzle)。
 <!--more-->
-本来我们使用 jQuery 当作选择器，选定一些 #id 或 .class，使用 document.getElementById 或 document.getElemensByClassName 就可以很快锁定 DOM 所在的位置，然后返回给 jQuery 当作对象。但有时候会碰到一些比较复杂的选择 `div div.hot>span` 这类肯定用上面的函数是不行的，首先考虑到的是 `Element.querySelectorAll()` 函数，但这个函数存在严重的兼容性问题[MDN querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)。这个时候 sizzle 就派上用场了。
+本来我们使用 jQuery 当作选择器，选定一些 #id 或 .class，使用 `document.getElementById` 或 `document.getElemensByClassName` 就可以很快锁定 DOM 所在的位置，然后返回给 jQuery 当作对象。但有时候会碰到一些比较复杂的选择 `div div.hot>span` 这类肯定用上面的函数是不行的，首先考虑到的是 `Element.querySelectorAll()` 函数，但这个函数存在严重的兼容性问题[MDN querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)。这个时候 sizzle 就派上用场了。
 
 init 函数介绍中已经说明白，没有介绍 find 函数，其本质上就是 Sizzle 函数在 jQuery 中的表现。这个函数在 jQuery 中两种存在形式，即原型和属性上分别有一个，先来看下 `jQuery.fn.find`:
 
@@ -326,6 +326,6 @@ var sortOrder = function (a, b) {
 
 ## 参考
 
-[jQuery 2.0.3 源码分析Sizzle引擎 - 词法解析](http://www.cnblogs.com/aaronjs/p/3300797.html)
+>[jQuery 2.0.3 源码分析Sizzle引擎 - 词法解析](http://www.cnblogs.com/aaronjs/p/3300797.html)
 
 本文在 github 上的[源码地址](https://github.com/songjinzhong/JQuerySource)，欢迎来 star。
