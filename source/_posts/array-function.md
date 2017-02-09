@@ -26,36 +26,6 @@ JavaScript 中的数组本身就很特别，不像 C 或 Java，搞了数组、l
 
 一般情况下，数组方法在最后都会带有一个 thisArg 的参数，这个参数会指定内部 this 的指向。如果参数中有回掉函数，这个回掉函数一般接受 3 个参数，value、index 和 array，分别代表当前传入的值，当前传入值所在的索引和当前的处理的数组。
 
-目录索引：
-
-[concat](#concat)
-[every](#every)
-[filter](#filter)
-[forEach](#forEach)
-[indexOf](#indexOf)
-[join](#join)
-[lastIndexOf](#lastIndexOf)
-[map](#map)
-[reduce](#reduce)
-[reduceRight](#reduceRight)
-[push](#push)
-[pop](#pop)
-[unshift](#unshift)
-[shift](#shift)
-[reverse](#reverse)
-[slice](#slice)
-[splice](#splice)
-[some](#some)
-[sort](#sort)
-[toString](#toString)
-[copyWithin](#copyWithin)
-[find](#find)
-[findIndex](#findIndex)
-[fill](#fill)
-[keys](#keys)
-[entries](#entries)
-[includes](#includes)
-
 ### concat
 
 这个方法可以用于数组的拼接，参数是一个或多个数组，返回的结果是拼接数组。[MDN array.concat](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)。
