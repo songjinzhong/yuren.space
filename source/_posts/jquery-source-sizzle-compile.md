@@ -1,5 +1,5 @@
 ---
-title: jQuery 源码系列（五）sizzle 编译
+title: jQuery 源码系列（六）sizzle 编译
 layout: post
 comments: true
 date: 2017-02-16 20:23:07
