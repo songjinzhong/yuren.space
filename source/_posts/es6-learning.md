@@ -68,7 +68,7 @@ function obj() {
 function foo() {
   var _this = this;
   setTimeout(function () {
-    console.log(this.id);
+    console.log(_this.id);
   }, 20);
 }
 ```
