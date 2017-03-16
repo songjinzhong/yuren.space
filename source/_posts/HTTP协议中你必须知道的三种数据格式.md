@@ -6,6 +6,7 @@ date: 2016-10-22 18:19:08
 tags: [Http协议, Python, chunked]
 categories: Http协议
 description: HTTP 协议 知道 三种 数据 格式
+hot: true
 photos:
 - http://ww1.sinaimg.cn/mw690/e3dde130gw1f91fq0x79gj20zk0fuq92.jpg
 - http://ww1.sinaimg.cn/small/e3dde130gw1f91fq0x79gj20zk0fuq92.jpg

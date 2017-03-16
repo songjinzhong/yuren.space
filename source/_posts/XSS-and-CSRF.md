@@ -6,6 +6,7 @@ date: 2016-11-26 19:17:15
 tags: [Web安全]
 categories: Web安全
 description: XSS CSRF 两种 跨站 攻击
+hot: true
 photos:
 - http://ww4.sinaimg.cn/mw690/e3dde130gw1fa5qff0d0gj20zk0npk1e.jpg
 - http://ww4.sinaimg.cn/small/e3dde130gw1fa5qff0d0gj20zk0npk1e.jpg

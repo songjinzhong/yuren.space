@@ -6,6 +6,7 @@ date: 2017-03-06 22:48:40
 tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 class 相关 操作
+hot: true
 photos:
 - http://wx2.sinaimg.cn/mw690/e3dde130gy1fddid7ec6yj20zk0npwoh.jpg
 - http://wx2.sinaimg.cn/small/e3dde130gy1fddid7ec6yj20zk0npwoh.jpg

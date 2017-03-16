@@ -6,6 +6,7 @@ date: 2016-10-23 11:15:46
 tags: [JavaScript, 组件, 继承]
 categories: JavaScript
 description: 组件 JS 真正 继承
+hot: true
 photos:
 - http://ww2.sinaimg.cn/mw690/e3dde130gw1f921dc4bc7j20zk0p4afy.jpg
 - http://ww2.sinaimg.cn/small/e3dde130gw1f921dc4bc7j20zk0p4afy.jpg

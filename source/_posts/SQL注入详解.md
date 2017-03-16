@@ -6,6 +6,7 @@ date: 2016-10-01 21:09:44
 tags: [Web安全, SQL注入]
 categories: Web安全
 description: SQL 注入 详解
+hot: true
 photos:
 - http://ww2.sinaimg.cn/mw690/e3dde130gw1f8hsvng0gcj20zk0o6k1e.jpg
 - http://ww2.sinaimg.cn/small/e3dde130gw1f8hsvng0gcj20zk0o6k1e.jpg
