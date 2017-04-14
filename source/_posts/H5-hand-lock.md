@@ -2,7 +2,7 @@
 title: 用 canvas 实现 Web 手势解锁
 layout: post
 comments: true
-hot: false
+hot: true
 date: 2017-04-01 19:26:11
 tags: [JavaScript, canvas]
 categories: JavaScript
