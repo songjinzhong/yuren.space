@@ -23,7 +23,7 @@ photos:
 
 扫码在线查看：
 
-![](http://omuedc5n9.bkt.clouddn.com/url.png)
+![](http://omuedc5n9.bkt.clouddn.com/url2.png)
 
 项目 GitHub 地址，[H5HandLock](https://github.com/songjinzhong/H5HandLock)。
 
