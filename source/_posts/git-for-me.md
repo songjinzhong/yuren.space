@@ -7,8 +7,8 @@ tags: [工具, Git]
 categories: [工具]
 description: 我 常用 那些 Git 命令
 photos:
-- http://wx2.sinaimg.cn/mw690/e3dde130gy1fbyc5rvraqj20zk0npmzx.jpg
-- http://wx2.sinaimg.cn/small/e3dde130gy1fbyc5rvraqj20zk0npmzx.jpg
+- https://wx2.sinaimg.cn/mw690/e3dde130gy1fbyc5rvraqj20zk0npmzx.jpg
+- https://wx2.sinaimg.cn/small/e3dde130gy1fbyc5rvraqj20zk0npmzx.jpg
 ---
 我从没有用过 SVN，为什么，因为我在接触 Git 之前从没有接触到版本工具，大部分时间都是一个人在盲干。我对 SVN 的命令还是熟悉那么一点点，但当我身边使用过 Git 和 SVN 的人都在夸赞前者的时候，我想，不会 SVN，那又如何呢。
 <!--more-->

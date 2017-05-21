@@ -8,8 +8,8 @@ categories: JavaScript
 description: es6
 hot: true
 photos:
-- http://ww1.sinaimg.cn/mw690/e3dde130gw1fan4pqnd1uj20zk0npdpl.jpg
-- http://ww1.sinaimg.cn/small/e3dde130gw1fan4pqnd1uj20zk0npdpl.jpg
+- https://ww1.sinaimg.cn/mw690/e3dde130gw1fan4pqnd1uj20zk0npdpl.jpg
+- https://ww1.sinaimg.cn/small/e3dde130gw1fan4pqnd1uj20zk0npdpl.jpg
 ---
 在没有学习 ES6 之前，学习 React，真的是一件非常痛苦的事情。即使之前你对 ES5 有着很好的基础，包括闭包、函数、原型链和继承，但是 React 中已经普遍使用 ES6 的语法，包括 modules、class、箭头函数等，还有 JSX 语法。所以，在学习 React 之前一定要先学习 ES6。
 

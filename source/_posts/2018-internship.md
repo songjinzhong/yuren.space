@@ -8,8 +8,8 @@ tags: [总结, 实习, 面试]
 categories: 总结
 description: 蚂蚁金服 17 暑假 实习生 前端 面试 总结
 photos:
-- http://wx4.sinaimg.cn/mw690/e3dde130ly1ffl6ob4ofzj20zk0p5781.jpg
-- http://wx4.sinaimg.cn/small/e3dde130ly1ffl6ob4ofzj20zk0p5781.jpg
+- https://wx4.sinaimg.cn/mw690/e3dde130ly1ffl6ob4ofzj20zk0p5781.jpg
+- https://wx4.sinaimg.cn/small/e3dde130ly1ffl6ob4ofzj20zk0p5781.jpg
 ---
 我是 18 届的毕业生，今年 3 月份的时候开始找暑假实习，有幸内推了蚂蚁金服的前端，并通过了他们的面试。最终还是没能拿到蚂蚁的实习 offer，因为 hc 问题，被调剂到集团去了。
 <!--more-->

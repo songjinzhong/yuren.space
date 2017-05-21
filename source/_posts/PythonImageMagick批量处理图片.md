@@ -7,8 +7,8 @@ tags: [Python, 图片处理, ImageMagick]
 categories: 图片处理
 description: Windows Python ImageMagick 处理 图片
 photos:
-- http://ww4.sinaimg.cn/mw690/e3dde130gw1f8hqsr6xakj20zk0np18i.jpg
-- http://ww4.sinaimg.cn/small/e3dde130gw1f8hqsr6xakj20zk0np18i.jpg
+- https://ww4.sinaimg.cn/mw690/e3dde130gw1f8hqsr6xakj20zk0np18i.jpg
+- https://ww4.sinaimg.cn/small/e3dde130gw1f8hqsr6xakj20zk0np18i.jpg
 ---
 这周研究漏洞时，看了一下关于 ImageMagick 的漏洞，它是远程代码执行漏洞，远程攻击者利用漏洞通过上传恶意构造的图像文件，可在目标服务器执行任意代码，进而获得网站服务器的控制权。
 

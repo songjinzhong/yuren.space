@@ -7,8 +7,8 @@ tags: [CSS, border]
 categories: CSS
 description: css border top right bottom left
 photos:
-- http://ww3.sinaimg.cn/mw690/e3dde130gw1f8stqiah2wj20zk0qodv9.jpg
-- http://ww3.sinaimg.cn/small/e3dde130gw1f8stqiah2wj20zk0qodv9.jpg
+- https://ww3.sinaimg.cn/mw690/e3dde130gw1f8stqiah2wj20zk0qodv9.jpg
+- https://ww3.sinaimg.cn/small/e3dde130gw1f8stqiah2wj20zk0qodv9.jpg
 ---
 CSS 中的 border 属性，我想凡是了解一点 CSS 的都知道它是作用，可以在 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/border) 上找到对它的详细介绍。
 

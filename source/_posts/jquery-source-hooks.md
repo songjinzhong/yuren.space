@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 hooks 原理
 photos:
-- http://wx4.sinaimg.cn/mw690/e3dde130gy1fd2spe8co2j20zk0m8jxt.jpg
-- http://wx4.sinaimg.cn/small/e3dde130gy1fd2spe8co2j20zk0m8jxt.jpg
+- https://wx4.sinaimg.cn/mw690/e3dde130gy1fd2spe8co2j20zk0m8jxt.jpg
+- https://wx4.sinaimg.cn/small/e3dde130gy1fd2spe8co2j20zk0m8jxt.jpg
 ---
 hooks 在英语中的意思表示钩子或挂钩，在 jQuery 中也有 hooks 这么一个概念，它的功能在考虑到一些兼容性和其它特殊情况的条件下，优先考虑这些特殊情况，而后才去用普通的方法处理，这种说法还是比较形象的。
 <!--more-->

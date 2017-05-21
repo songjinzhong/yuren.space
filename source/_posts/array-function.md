@@ -7,8 +7,8 @@ tags: [JavaScript, JS进阶]
 categories: [JavaScript]
 description: 数组 方法 总结
 photos:
-- http://ww1.sinaimg.cn/mw690/e3dde130gw1fbrcw7ywoij20zk0o2wj5.jpg
-- http://ww1.sinaimg.cn/small/e3dde130gw1fbrcw7ywoij20zk0o2wj5.jpg
+- https://ww1.sinaimg.cn/mw690/e3dde130gw1fbrcw7ywoij20zk0o2wj5.jpg
+- https://ww1.sinaimg.cn/small/e3dde130gw1fbrcw7ywoij20zk0o2wj5.jpg
 ---
 说起来很搞笑，我在用 sublime 3 写排序算法的时候，准备用 nodejs 来运行，就用 sublime 3 提供的编译功能。但问题来了，我比较挫，写了个死循环，然后 sublime 3 也不给输出提示，我很疑惑的连续跑了 3 遍，过了一会电脑发热，风扇开始叫了，我察觉到，一看进程，3 个 node 进程在狂吃内存和 cpu，我在想，这个 bug 该反馈给 sublime 3 还是 node 呢？
 <!--more-->

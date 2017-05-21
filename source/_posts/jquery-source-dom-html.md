@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 html text
 photos:
-- http://wx3.sinaimg.cn/mw690/e3dde130gy1fd9vyvjtygj20zk0qoq9l.jpg
-- http://wx3.sinaimg.cn/small/e3dde130gy1fd9vyvjtygj20zk0qoq9l.jpg
+- https://wx3.sinaimg.cn/mw690/e3dde130gy1fd9vyvjtygj20zk0qoq9l.jpg
+- https://wx3.sinaimg.cn/small/e3dde130gy1fd9vyvjtygj20zk0qoq9l.jpg
 ---
 上一章谈到了 dom 的几个插入操作，虽然插入的方式多种多样，但只要在懂了原生方法等基础上，代码看起来都不是很复杂。比较有意思的一个函数就是 buildFragment 方法，用来将 html 字符串转换成 dom 碎片。本章来看一下 dom 的其它方法。
 <!--more-->

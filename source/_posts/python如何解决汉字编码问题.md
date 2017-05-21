@@ -7,8 +7,8 @@ tags: [Python, 编码]
 categories: Python
 description: Python Unicode Decode Error 解决 汉字 编码 问题
 photos:
-- http://ww2.sinaimg.cn/mw690/e3dde130gw1f8hiwd04w4j20zk0jz0z5.jpg
-- http://ww2.sinaimg.cn/small/e3dde130gw1f8hiwd04w4j20zk0jz0z5.jpg
+- https://ww2.sinaimg.cn/mw690/e3dde130gw1f8hiwd04w4j20zk0jz0z5.jpg
+- https://ww2.sinaimg.cn/small/e3dde130gw1f8hiwd04w4j20zk0jz0z5.jpg
 ---
 
 由于项目需要，需要读取一个含有中文的txt文档，完了还要保存文件。文档之前是由base64编码，导致所有汉字读取显示乱码。项目组把base64废弃之后，先后出现两个错误：

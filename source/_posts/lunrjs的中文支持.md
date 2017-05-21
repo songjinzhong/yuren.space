@@ -7,8 +7,8 @@ tags: [建站, JavaScript, LunrJs]
 categories: 建站
 description: 我的建站路4：解决 lunr.js 的中文支持问题
 photos:
-- http://ww1.sinaimg.cn/mw690/e3dde130gw1f8hoek1ibnj20zk0mtdkx.jpg
-- http://ww1.sinaimg.cn/small/e3dde130gw1f8hoek1ibnj20zk0mtdkx.jpg
+- https://ww1.sinaimg.cn/mw690/e3dde130gw1f8hoek1ibnj20zk0mtdkx.jpg
+- https://ww1.sinaimg.cn/small/e3dde130gw1f8hoek1ibnj20zk0mtdkx.jpg
 ---
 之前已经说过了，还没有为博客添加搜索功能，实际上，这个功能早已经实现了，只是还存在bug，比如对中文的强烈不兼容（实际上只支持汉语拼音，就是你要搜索“问题”，要打“wen ti”，真尴尬）。
 

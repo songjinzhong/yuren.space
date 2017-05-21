@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 Callbacks 函数
 photos:
-- http://wx2.sinaimg.cn/mw690/e3dde130gy1fcvr6ubwfbj20zk0npgtl.jpg
-- http://wx2.sinaimg.cn/small/e3dde130gy1fcvr6ubwfbj20zk0npgtl.jpg
+- https://wx2.sinaimg.cn/mw690/e3dde130gy1fcvr6ubwfbj20zk0npgtl.jpg
+- https://wx2.sinaimg.cn/small/e3dde130gy1fcvr6ubwfbj20zk0npgtl.jpg
 ---
 讲真，Sizzle 的源码真的太压抑了，以至于写 Sizzle 文章的这段时间里都非常的痛苦，刚开始觉得它还挺有意思的，越到后面越觉得代码很难读懂，烦。
 

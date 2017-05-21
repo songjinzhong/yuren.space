@@ -8,8 +8,8 @@ categories: Http协议
 description: HTTP 协议 知道 三种 数据 格式
 hot: true
 photos:
-- http://ww1.sinaimg.cn/mw690/e3dde130gw1f91fq0x79gj20zk0fuq92.jpg
-- http://ww1.sinaimg.cn/small/e3dde130gw1f91fq0x79gj20zk0fuq92.jpg
+- https://ww1.sinaimg.cn/mw690/e3dde130gw1f91fq0x79gj20zk0fuq92.jpg
+- https://ww1.sinaimg.cn/small/e3dde130gw1f91fq0x79gj20zk0fuq92.jpg
 ---
 实习中的一个主要工作就是分析 HTTP 中的协议，自己也用 Python 写过正则表达式对 HTTP 请求和响应的内容进行匹配，然后把关键字段抽离出来放到一个字典中以备使用(可以稍微改造一下就是一个爬虫工具)。
 

@@ -8,8 +8,8 @@ tags: [面试, JavaScript, CSS]
 categories: 面试
 description: 阿里 14 前端 实习生 招聘 在线 笔试题
 photos:
-- http://wx2.sinaimg.cn/mw690/e3dde130gy1fdtngqqrzjj20zk0njdlt.jpg
-- http://wx2.sinaimg.cn/small/e3dde130gy1fdtngqqrzjj20zk0njdlt.jpg
+- https://wx2.sinaimg.cn/mw690/e3dde130gy1fdtngqqrzjj20zk0njdlt.jpg
+- https://wx2.sinaimg.cn/small/e3dde130gy1fdtngqqrzjj20zk0njdlt.jpg
 ---
 我自己做的前端笔试题，虽然未在指定的时间答题，也未在规定的时间内完成，也不是独立完成。
 

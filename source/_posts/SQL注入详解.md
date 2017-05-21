@@ -8,8 +8,8 @@ categories: Web安全
 description: SQL 注入 详解
 hot: true
 photos:
-- http://ww2.sinaimg.cn/mw690/e3dde130gw1f8hsvng0gcj20zk0o6k1e.jpg
-- http://ww2.sinaimg.cn/small/e3dde130gw1f8hsvng0gcj20zk0o6k1e.jpg
+- https://ww2.sinaimg.cn/mw690/e3dde130gw1f8hsvng0gcj20zk0o6k1e.jpg
+- https://ww2.sinaimg.cn/small/e3dde130gw1f8hsvng0gcj20zk0o6k1e.jpg
 ---
 从今年(2016) 6 月初来到南京( 841 研究所)实习，到现在四个月过去了，期间主要的工作还是研究 WEB 安全，编程语言是 Python，常用到正则表达式，对 HTTP 的协议也非常清晰。
 

@@ -20,19 +20,19 @@ permalink_defaults:
 # Directory
 source_dir: source
 public_dir: public
-tag_dir: blog/tags
-archive_dir: blog/archives
-category_dir: blog/categories
-code_dir: blog/downloads/code
+tag_dir: blog/tags/
+archive_dir: blog/archives/
+category_dir: blog/categories/
+code_dir: blog/downloads/code/
 i18n_dir: blog/:lang
 skip_render:
 
-blog_home_dir: blog
+blog_home_dir: blog/
 rss_dir: blog/rss.xml
-about_dir: about
-web_info_dir: blog/web-info
-resume_dir: resume
-projects_dir: projects
+about_dir: about/
+web_info_dir: blog/web-info/
+resume_dir: resume/
+projects_dir: projects/
 
 # Writing
 new_post_name: :title.md # File name of new posts

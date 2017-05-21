@@ -7,8 +7,8 @@ tags: [JavaScript, 项目]
 categories: JavaScript
 description: 如何 展示 自己 GitHub 项目
 photos:
-- http://ww4.sinaimg.cn/mw690/e3dde130gw1faemsk12h0j20zk0k0q9k.jpg
-- http://ww4.sinaimg.cn/small/e3dde130gw1faemsk12h0j20zk0k0q9k.jpg
+- https://ww4.sinaimg.cn/mw690/e3dde130gw1faemsk12h0j20zk0k0q9k.jpg
+- https://ww4.sinaimg.cn/small/e3dde130gw1faemsk12h0j20zk0k0q9k.jpg
 ---
 经常会在别人的简历中看到，做过什么高大上的项目。说实话，有时候看到一些大牛的简历，会感到非常的自卑，入行前端也一年多的时间了，但真正的‘懂行’或许也就半年的时间吧。真正大的前端项目没有做过，一些小的个人项目大多都托管在 GitHub，前段时间酝酿了一个展示 GitHub 项目的一个小 Project，今天就来说说这个东西。
 

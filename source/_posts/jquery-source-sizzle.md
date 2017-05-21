@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 sizzle 介绍
 photos:
-- http://wx3.sinaimg.cn/mw690/e3dde130gy1fciaf4zqv3j20zk0npgsy.jpg
-- http://wx3.sinaimg.cn/small/e3dde130gy1fciaf4zqv3j20zk0npgsy.jpg
+- https://wx3.sinaimg.cn/mw690/e3dde130gy1fciaf4zqv3j20zk0npgsy.jpg
+- https://wx3.sinaimg.cn/small/e3dde130gy1fciaf4zqv3j20zk0npgsy.jpg
 ---
 Sizzle 原本是 jQuery 中用来当作 DOM 选择器的，后来被 John Resig 单独分离出去，成为一个单独的项目，可以直接导入到项目中使用。[jquery/sizzle](https://github.com/jquery/sizzle)。
 <!--more-->

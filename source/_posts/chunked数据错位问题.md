@@ -7,8 +7,8 @@ tags: [Http协议, chunked]
 categories: Http协议
 description: 处理 Http 协议 chunked 数据 错位 问题
 photos:
-- http://ww3.sinaimg.cn/mw690/e3dde130gw1f8hjhe6x6yj20zk0p47au.jpg
-- http://ww3.sinaimg.cn/small/e3dde130gw1f8hjhe6x6yj20zk0p47au.jpg
+- https://ww3.sinaimg.cn/mw690/e3dde130gw1f8hjhe6x6yj20zk0p47au.jpg
+- https://ww3.sinaimg.cn/small/e3dde130gw1f8hjhe6x6yj20zk0p47au.jpg
 ---
 
 **问题**

@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 自定义 事件
 photos:
-- http://wx4.sinaimg.cn/mw690/e3dde130gy1fd7jlbk9a8j20zk0nm4av.jpg
-- http://wx4.sinaimg.cn/small/e3dde130gy1fd7jlbk9a8j20zk0nm4av.jpg
+- https://wx4.sinaimg.cn/mw690/e3dde130gy1fd7jlbk9a8j20zk0nm4av.jpg
+- https://wx4.sinaimg.cn/small/e3dde130gy1fd7jlbk9a8j20zk0nm4av.jpg
 ---
 以前，我只知道，只有当对浏览器中的元素进行点击的时候，才会出发 click 事件，其它的事件也一样，需要人为的鼠标操作。
 <!--more-->

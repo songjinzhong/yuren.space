@@ -8,8 +8,8 @@ categories: 源码系列
 description: jQuery 源码 系列 总体 架构
 hot: true
 photos:
-- http://wx1.sinaimg.cn/mw690/e3dde130gy1fc7s8ny01cj20zk0iy76v.jpg
-- http://wx1.sinaimg.cn/small/e3dde130gy1fc7s8ny01cj20zk0iy76v.jpg
+- https://wx1.sinaimg.cn/mw690/e3dde130gy1fc7s8ny01cj20zk0iy76v.jpg
+- https://wx1.sinaimg.cn/small/e3dde130gy1fc7s8ny01cj20zk0iy76v.jpg
 ---
 决定你走多远的是基础，jQuery 源码分析，向长者膜拜！
 

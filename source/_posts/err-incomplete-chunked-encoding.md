@@ -7,8 +7,8 @@ tags: [建站, 问题, chunked]
 categories: 建站
 description: 解决 服务器 err incomplete chunked encoding 问题
 photos:
-- http://ww1.sinaimg.cn/mw690/e3dde130gw1f8hkqbmatwj20zk0quabs.jpg
-- http://ww1.sinaimg.cn/small/e3dde130gw1f8hkqbmatwj20zk0quabs.jpg
+- https://ww1.sinaimg.cn/mw690/e3dde130gw1f8hkqbmatwj20zk0quabs.jpg
+- https://ww1.sinaimg.cn/small/e3dde130gw1f8hkqbmatwj20zk0quabs.jpg
 ---
 
 今天想把网站用非root用户启动，于是就修改了网站的启动用户，然后发现了当浏览器打开某些带有chunked网页的时候，会出现无响应的情况，通过调试，错误如下：

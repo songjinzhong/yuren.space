@@ -8,8 +8,8 @@ categories: 源码系列
 description: jQuery 源码 系列 class 相关 操作
 hot: true
 photos:
-- http://wx2.sinaimg.cn/mw690/e3dde130gy1fddid7ec6yj20zk0npwoh.jpg
-- http://wx2.sinaimg.cn/small/e3dde130gy1fddid7ec6yj20zk0npwoh.jpg
+- https://wx2.sinaimg.cn/mw690/e3dde130gy1fddid7ec6yj20zk0npwoh.jpg
+- https://wx2.sinaimg.cn/small/e3dde130gy1fddid7ec6yj20zk0npwoh.jpg
 ---
 眼看 jQuery 的源码就快到头了，后面还有几个重要的内容，包括 ajax 和动画操作，加油把它们看完，百度前端学院的新一批课程也开始了。[百度前端学院](http://ife.baidu.com/course/all)。
 <!--more-->

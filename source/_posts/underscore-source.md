@@ -8,8 +8,8 @@ tags: [源码系列, Underscore, JavaScript]
 categories: 源码系列
 description: Underscore 源码 总体 架构
 photos:
-- http://wx1.sinaimg.cn/mw690/e3dde130gy1femitpexzoj20zk0qowqh.jpg
-- http://wx1.sinaimg.cn/small/e3dde130gy1femitpexzoj20zk0qowqh.jpg
+- https://wx1.sinaimg.cn/mw690/e3dde130gy1femitpexzoj20zk0qowqh.jpg
+- https://wx1.sinaimg.cn/small/e3dde130gy1femitpexzoj20zk0qowqh.jpg
 ---
 其实，学习一个库的源码，最重要的就是先理清它的基本架构，jQuery 是这样，Underscore 也应该是这样。
 

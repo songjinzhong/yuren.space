@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 事件 体系 结构
 photos:
-- http://wx1.sinaimg.cn/mw690/e3dde130gy1fd3zdycxpcj20zk0qoqhs.jpg
-- http://wx1.sinaimg.cn/small/e3dde130gy1fd3zdycxpcj20zk0qoqhs.jpg
+- https://wx1.sinaimg.cn/mw690/e3dde130gy1fd3zdycxpcj20zk0qoqhs.jpg
+- https://wx1.sinaimg.cn/small/e3dde130gy1fd3zdycxpcj20zk0qoqhs.jpg
 ---
 前面一章，大概是一个总览，介绍了事件绑定的初衷和使用，通过了解，知道其内部是一个什么样的流程，从哪个函数到哪个函数。无论 jQuery 的源码简单或者复杂，有一点可以肯定，jQuery 致力于解决浏览器的兼容问题，最终是服务于使用者。
 <!--more-->

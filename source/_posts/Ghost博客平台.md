@@ -7,8 +7,8 @@ tags: [建站, Ghost]
 categories: 建站
 description: 建站 Ghost 博客 平台
 photos: 
-- http://ww2.sinaimg.cn/mw690/e3dde130gw1f8hk9i2r3hj20zk0nnk3r.jpg
-- http://ww2.sinaimg.cn/small/e3dde130gw1f8hk9i2r3hj20zk0nnk3r.jpg
+- https://ww2.sinaimg.cn/mw690/e3dde130gw1f8hk9i2r3hj20zk0nnk3r.jpg
+- https://ww2.sinaimg.cn/small/e3dde130gw1f8hk9i2r3hj20zk0nnk3r.jpg
 
 ---
 

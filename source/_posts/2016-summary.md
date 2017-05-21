@@ -7,8 +7,8 @@ tags: [总结]
 categories: 总结
 description: 2016 收获
 photos:
-- http://ww4.sinaimg.cn/mw690/e3dde130gw1fb972j9vf4j20zk0np4b4.jpg
-- http://ww4.sinaimg.cn/small/e3dde130gw1fb972j9vf4j20zk0np4b4.jpg
+- https://ww4.sinaimg.cn/mw690/e3dde130gw1fb972j9vf4j20zk0np4b4.jpg
+- https://ww4.sinaimg.cn/small/e3dde130gw1fb972j9vf4j20zk0np4b4.jpg
 ---
 2016 终于要结束了，虽然满怀期待地迎接 2017，但回首 2016，真的非常辛苦。因为我知道，2017 肯定会更加辛苦。在这有限的时间内，我学到了非常多的知识，这一年学到的知识，比整个本科学到的还要多。
 

@@ -8,8 +8,8 @@ tags: [JavaScript, canvas]
 categories: JavaScript
 description: 用 canvas 实现 Web 手势 解锁
 photos:
-- http://wx2.sinaimg.cn/mw690/e3dde130gy1fe7f1fpkyhj20zk0nm145.jpg
-- http://wx2.sinaimg.cn/small/e3dde130gy1fe7f1fpkyhj20zk0nm145.jpg
+- https://wx2.sinaimg.cn/mw690/e3dde130gy1fe7f1fpkyhj20zk0nm145.jpg
+- https://wx2.sinaimg.cn/small/e3dde130gy1fe7f1fpkyhj20zk0nm145.jpg
 ---
 最近参加 360 暑假的前端星计划，有一个在线作业，截止日期是 3 月 30 号，让手动实现一个 H5 手势解锁，具体的效果就像原生手机的九宫格解锁那样。
 <!--more-->

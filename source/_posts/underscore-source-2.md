@@ -8,8 +8,8 @@ tags: [源码系列, Underscore, JavaScript]
 categories: 源码系列
 description: Underscore 源码 常用思路 类型判断
 photos:
-- http://wx4.sinaimg.cn/mw690/e3dde130gy1ff2adwvucrj20zk0qojwe.jpg
-- http://wx4.sinaimg.cn/small/e3dde130gy1ff2adwvucrj20zk0qojwe.jpg
+- https://wx4.sinaimg.cn/mw690/e3dde130gy1ff2adwvucrj20zk0qojwe.jpg
+- https://wx4.sinaimg.cn/small/e3dde130gy1ff2adwvucrj20zk0qojwe.jpg
 ---
 前面已经介绍过了，关于 `_` 在内部是一个什么样的情况，其实就是定义了一个名字叫做 `_` 的函数，函数本身就是对象呀，就在 `_` 上扩展了 100 多种方法。
 <!--more-->

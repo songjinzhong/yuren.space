@@ -7,8 +7,8 @@ tags: [JavaScript, 浏览器, 正则表达式]
 categories: JavaScript
 description: JS 浏览器 类型
 photos:
-- http://ww4.sinaimg.cn/mw690/e3dde130gw1f9ycsiw1xsj20zk0ns7iv.jpg
-- http://ww4.sinaimg.cn/small/e3dde130gw1f9ycsiw1xsj20zk0ns7iv.jpg
+- https://ww4.sinaimg.cn/mw690/e3dde130gw1f9ycsiw1xsj20zk0ns7iv.jpg
+- https://ww4.sinaimg.cn/small/e3dde130gw1f9ycsiw1xsj20zk0ns7iv.jpg
 ---
 最近碰到了一个问题，判断浏览器的类型，我们熟知的 IE, Firefox, Opera, Safari, Chrome 五款比较有名的浏览器，有时候需要考虑兼容性问题，当然，即使是同一款浏览器，不同的 version 也会带来很多麻烦。
 

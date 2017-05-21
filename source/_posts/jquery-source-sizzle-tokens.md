@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 tokens 词法 分析
 photos:
-- http://wx1.sinaimg.cn/mw690/e3dde130gy1fcnp8xamp0j20zk0qo7c5.jpg
-- http://wx1.sinaimg.cn/small/e3dde130gy1fcnp8xamp0j20zk0qo7c5.jpg
+- https://wx1.sinaimg.cn/mw690/e3dde130gy1fcnp8xamp0j20zk0qo7c5.jpg
+- https://wx1.sinaimg.cn/small/e3dde130gy1fcnp8xamp0j20zk0qo7c5.jpg
 ---
 在编译原理中，词法分析是一个非常关键的环节，词法分析器读入字节流，然后根据关键字、标识符、标点、字符串等进行划分，生成单词。Sizzle 选择器的匹配思路和这非常像，在内部叫做 Tokens。
 <!--more-->

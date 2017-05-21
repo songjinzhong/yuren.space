@@ -8,8 +8,8 @@ categories: Web安全
 description: XSS CSRF 两种 跨站 攻击
 hot: true
 photos:
-- http://ww4.sinaimg.cn/mw690/e3dde130gw1fa5qff0d0gj20zk0npk1e.jpg
-- http://ww4.sinaimg.cn/small/e3dde130gw1fa5qff0d0gj20zk0npk1e.jpg
+- https://ww4.sinaimg.cn/mw690/e3dde130gw1fa5qff0d0gj20zk0npk1e.jpg
+- https://ww4.sinaimg.cn/small/e3dde130gw1fa5qff0d0gj20zk0npk1e.jpg
 ---
 差不多刚开始接触前端的时候，经常能看到一些早几年入行大牛们的简历，几乎所有人都会在简历中带上这么一句话：具备基本的 Web 安全知识（XSS / CSRF）。显然这已经成为前端人员的必备知识。
 

@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 event 总体 概述
 photos:
-- http://wx1.sinaimg.cn/mw690/e3dde130gy1fd2tjbm8c1j20zk0qojxt.jpg
-- http://wx1.sinaimg.cn/small/e3dde130gy1fd2tjbm8c1j20zk0qojxt.jpg
+- https://wx1.sinaimg.cn/mw690/e3dde130gy1fd2tjbm8c1j20zk0qojxt.jpg
+- https://wx1.sinaimg.cn/small/e3dde130gy1fd2tjbm8c1j20zk0qojxt.jpg
 ---
 这次的内容是来介绍关于 jQuery 的事件委托。不过在之前呢有必要先来了解一下 JS 中的事件委托与冒泡，我之前也写过类似的博客，[事件冒泡与捕获](http://yuren.space/blog/2016/10/16/%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E4%B8%8E%E6%8D%95%E8%8E%B7/)
 <!--more-->

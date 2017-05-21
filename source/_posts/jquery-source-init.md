@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 init 介绍
 photos:
-- http://wx2.sinaimg.cn/mw690/e3dde130gy1fcflc9z137j20zk0no7br.jpg
-- http://wx2.sinaimg.cn/small/e3dde130gy1fcflc9z137j20zk0no7br.jpg
+- https://wx2.sinaimg.cn/mw690/e3dde130gy1fcflc9z137j20zk0no7br.jpg
+- https://wx2.sinaimg.cn/small/e3dde130gy1fcflc9z137j20zk0no7br.jpg
 ---
 ## init 构造器
 

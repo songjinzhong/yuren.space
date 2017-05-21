@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 回溯 机制
 photos:
-- http://wx4.sinaimg.cn/mw690/e3dde130gy1fd0p92kpgmj20zk0qn7ip.jpg
-- http://wx4.sinaimg.cn/small/e3dde130gy1fd0p92kpgmj20zk0qn7ip.jpg
+- https://wx4.sinaimg.cn/mw690/e3dde130gy1fd0p92kpgmj20zk0qn7ip.jpg
+- https://wx4.sinaimg.cn/small/e3dde130gy1fd0p92kpgmj20zk0qn7ip.jpg
 ---
 学习了 prevObject 之后发现，我之前写的一篇博客介绍 pushStack 函数那个内容是有问题的。本来我以为这个 pushStack 函数就是一个普通的函数，它接受一个 DOM （数组）参数，把该参数合并到一个 jQuery 对象中并返回该 jQuery 对象。
 <!--more-->

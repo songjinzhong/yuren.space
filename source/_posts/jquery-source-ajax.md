@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 ajax 相关 操作
 photos:
-- http://wx2.sinaimg.cn/mw690/e3dde130gy1fdeh0k9b7wj20zk0qo110.jpg
-- http://wx2.sinaimg.cn/small/e3dde130gy1fdeh0k9b7wj20zk0qo110.jpg
+- https://wx2.sinaimg.cn/mw690/e3dde130gy1fdeh0k9b7wj20zk0qo110.jpg
+- https://wx2.sinaimg.cn/small/e3dde130gy1fdeh0k9b7wj20zk0qo110.jpg
 ---
 关于 ajax，东西太多了，我本来想避开 ajax，避而不提，但觉得 ajax 这么多内容，不说又少点什么，就简单点来介绍吧，加上最近准备内推面试的时候，看了不少 ajax 的相关知识。
 <!--more-->

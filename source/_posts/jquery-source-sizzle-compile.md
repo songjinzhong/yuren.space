@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 sizzle 编译
 photos:
-- http://wx3.sinaimg.cn/mw690/e3dde130gy1fcskz8qzbtj20zk0np7as.jpg
-- http://wx3.sinaimg.cn/small/e3dde130gy1fcskz8qzbtj20zk0np7as.jpg
+- https://wx3.sinaimg.cn/mw690/e3dde130gy1fcskz8qzbtj20zk0np7as.jpg
+- https://wx3.sinaimg.cn/small/e3dde130gy1fcskz8qzbtj20zk0np7as.jpg
 ---
 ## compile
 

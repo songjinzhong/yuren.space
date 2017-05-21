@@ -7,8 +7,8 @@ tags: [建站, Ghost]
 categories: 建站
 description: 我的建站路2：免费的 Ghost 主题
 photos:
-- http://ww4.sinaimg.cn/mw690/e3dde130gw1f8hnx8hoaej20zk0mujxl.jpg
-- http://ww4.sinaimg.cn/small/e3dde130gw1f8hnx8hoaej20zk0mujxl.jpg
+- https://ww4.sinaimg.cn/mw690/e3dde130gw1f8hnx8hoaej20zk0mujxl.jpg
+- https://ww4.sinaimg.cn/small/e3dde130gw1f8hnx8hoaej20zk0mujxl.jpg
 ---
 
 Ghost是免费的博客平台，它有一个自己的自适应博客界面，样子一般，后台用的是handlebars.js模板，所有，我们可以设计自己的主题。

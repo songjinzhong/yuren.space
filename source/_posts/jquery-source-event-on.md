@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 事件 处理 源码
 photos:
-- http://wx1.sinaimg.cn/mw690/e3dde130gy1fd57ymld2pj20zk0k0wmy.jpg
-- http://wx1.sinaimg.cn/small/e3dde130gy1fd57ymld2pj20zk0k0wmy.jpg
+- https://wx1.sinaimg.cn/mw690/e3dde130gy1fd57ymld2pj20zk0k0wmy.jpg
+- https://wx1.sinaimg.cn/small/e3dde130gy1fd57ymld2pj20zk0k0wmy.jpg
 ---
 通过前面一章对于 addEvent 库的介绍，它的兼容性超级棒，据说对于 IE4、5 都有很好的兼容性，这和 jQuery 的原理是一致的，而在 jQuery 中，有一个对象与其相对应，那就是 event。
 <!--more-->

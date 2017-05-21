@@ -7,8 +7,8 @@ tags: [源码系列, jQuery, JavaScript]
 categories: 源码系列
 description: jQuery 源码 系列 data 缓存 机制
 photos:
-- http://wx3.sinaimg.cn/mw690/e3dde130gy1fcyatmrfiwj20zk0npdj0.jpg
-- http://wx3.sinaimg.cn/small/e3dde130gy1fcyatmrfiwj20zk0npdj0.jpg
+- https://wx3.sinaimg.cn/mw690/e3dde130gy1fcyatmrfiwj20zk0npdj0.jpg
+- https://wx3.sinaimg.cn/small/e3dde130gy1fcyatmrfiwj20zk0npdj0.jpg
 ---
 不打算介绍 deferred，或者放到后面以后去介绍，因为我对于 js 的异步存在着恐惧，看了半天代码，发现，用挺好用的，一看源码，全傻眼了。如果你感兴趣，这边[链接1](http://www.cnblogs.com/aaronjs/p/3348569.html)，[链接2](http://www.cnblogs.com/aaronjs/p/3348569.html)。
 <!--more-->

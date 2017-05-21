@@ -8,8 +8,8 @@ categories: JavaScript
 description: 组件 JS 真正 继承
 hot: true
 photos:
-- http://ww2.sinaimg.cn/mw690/e3dde130gw1f921dc4bc7j20zk0p4afy.jpg
-- http://ww2.sinaimg.cn/small/e3dde130gw1f921dc4bc7j20zk0p4afy.jpg
+- https://ww2.sinaimg.cn/mw690/e3dde130gw1f921dc4bc7j20zk0p4afy.jpg
+- https://ww2.sinaimg.cn/small/e3dde130gw1f921dc4bc7j20zk0p4afy.jpg
 ---
 其实，无论是写什么语言的程序员，最终的目的，都是把产品或代码封装到一起，提供接口，让使用者很舒适的实现功能。所以对于我来说，往往头疼的不是写代码，而是写注释和文档！如果接口很乱，肯定会头疼一整天。
 
